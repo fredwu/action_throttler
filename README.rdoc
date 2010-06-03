@@ -4,7 +4,7 @@
 
 Action Throttler is an easy to use Rails plugin to quickly throttle application actions based on configurable duration and limit.
 
-Brought to you by Envato - http://envato.com/ and Wuit - http://wuit.com/.
+Brought to you by Envato - http://envato.com and Wuit - http://wuit.com.
 
 
 == Features
@@ -96,5 +96,5 @@ Note that <tt>ActionThrottler::Actions.run</tt> and its aliases will perform the
 
 Copyright (c) 2010 Fred Wu, released under the MIT license
 
-* Envato http://envato.com/
-* Wuit http://wuit.com/
+* Envato - http://envato.com
+* Wuit - http://wuit.com
