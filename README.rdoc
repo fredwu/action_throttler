@@ -89,7 +89,7 @@ Note that <tt>ActionThrottler::Actions.run</tt> and its aliases will perform the
 
   ActionThrottler::Actions.can_be_run?(:mail, @current_user)
 
-<tt>ActionThrottler::Actions.can_be_run?</tt> returns <tt>true</tt> or <tt>false</tt> without performing the action.
+<tt>ActionThrottler::Actions.can_be_run?</tt> returns <tt>true</tt> or <tt>false</tt> without performing the action, and it also has a negative alias, <tt>ActionThrottler::Actions.cannot_be_run?</tt>.
 
 
 == Author

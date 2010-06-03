@@ -30,6 +30,11 @@ module ActionThrottler
         ]).size < @actions[action][:limit] ? true : false
       end
       
+      # @see self::can_be_run?
+      def cannot_be_run?(action, ref = "")
+        not can_be_run?(action, ref)
+      end
+      
       # Runs an action and registers it in the database
       # 
       # @param  [Symbol]  action the name of the action to be run
@@ -46,12 +51,14 @@ module ActionThrottler
         end
       end
       
+      # @see self::run
       def can_run(action, ref = "")
         run(action, ref)
       end
       
+      # @see self::run
       def cannot_run(action, ref = "")
-        ! run(action, ref)
+        not run(action, ref)
       end
       
       private
