@@ -94,7 +94,7 @@ Note that <tt>ActionThrottler::Actions.run</tt> and its aliases will perform the
 
 == Author
 
-Copyright (c) 2010 Fred Wu, released under the MIT license
+Copyright (c) 2010 Fred Wu (http://fredwu.me), released under the MIT license
 
 * Envato - http://envato.com
 * Wuit - http://wuit.com
