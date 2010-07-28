@@ -19,7 +19,7 @@ module ActionThrottler
       # Checks the database to see if an action can be run
       # 
       # @param  [Symbol]  action the name of the action to be run
-      # @param  [Object]  ref    (optional) the reference object
+      # @param  [Mixed]   ref    (optional) the reference object
       # @return [Boolean]        returns true or false depending on the outcome
       def can_be_run?(action, ref = "")
         ::ActionThrottlerLog.all(:conditions => [
@@ -38,7 +38,7 @@ module ActionThrottler
       # Runs an action and registers it in the database
       # 
       # @param  [Symbol]  action the name of the action to be run
-      # @param  [Object]  ref    (optional) the reference object
+      # @param  [Mixed]   ref    (optional) the reference object
       # @return [Boolean]        returns true or false depending on the outcome
       def run(action, ref = "")
         if can_be_run?(action, ref)
@@ -58,16 +58,17 @@ module ActionThrottler
       
       # @see self::run
       def cannot_run(action, ref = "")
-        not run(action, ref)
+        ! run(action, ref)
       end
       
       private
       
       # Normalises the ref parameter so it can accept more than one type
       # 
-      # @param [Object] ref the ref parameter
+      # @param [Mixed] ref the ref parameter
+      # @return [String] ref id
       def normalise_ref(ref)
-        (ref.is_a?(Integer) or ref.is_a?(String)) ? ref : ref.id
+        (ref.is_a?(Integer) || ref.is_a?(String)) ? ref.to_s : ref.id.to_s
       end
     end
   end
