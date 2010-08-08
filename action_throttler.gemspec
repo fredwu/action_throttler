@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.files = [
     "README.md",
      "Rakefile",
+     "action_throttler.gemspec",
      "init.rb",
      "install.rb",
      "lib/action_throttler/actions.rb",
