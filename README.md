@@ -1,6 +1,6 @@
 # Action Throttler
 
-There is also a PHP version (for [Kohana](http://kohanaframework.org/)), see here: http://github.com/fredwu/kthrottler
+There is also a PHP version (for [Kohana](http://kohanaframework.org/)), see here: <http://github.com/fredwu/kthrottler>
 
 ## Introduction
 
