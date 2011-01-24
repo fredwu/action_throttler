@@ -1,3 +1,5 @@
+[![](http://stillmaintained.com/fredwu/action_throttler.png)](http://stillmaintained.com/fredwu/action_throttler)
+
 # Action Throttler
 
 There is also a PHP version (for [Kohana](http://kohanaframework.org/)), see here: <http://github.com/fredwu/kthrottler>
